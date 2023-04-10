@@ -28,11 +28,11 @@ app.post('/', async (req, res) => {
             model: "text-davinci-003",
             prompt: `${prompt}`,
             temperature: 0.7,
-            max_tokens: 50,
+            max_tokens: 500,
             frequency_penalty: 0.5,
             top_p: 1,
             presence_penalty: 0,
-        })
+        });
 
         res.status(200).send({
             bot: response.data.choices[0].text
